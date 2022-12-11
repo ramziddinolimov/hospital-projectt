@@ -29,7 +29,7 @@ export const Nav = styled.div`
 
 export const Icon = styled.div`
 text-align: end;
-padding: 3% 3%;
+/* padding: 3% 0%; */
 .bx {
 font-size: 40px;
 }
@@ -38,13 +38,17 @@ font-size: 40px;
 
 export const Records = styled.div`
 border-top: 1px solid black;
-padding: 10% 2%;
+padding: 10% 0%;
 
 .link{
-padding: 3% 0%;
+padding: 1% 4%;
 a{
 text-decoration: none;
 color: black;
 }
+}
+
+.acc {
+box-shadow: none;
 }
 `

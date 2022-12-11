@@ -62,7 +62,7 @@ function MenuModal({ open, setOpen }) {
             </Nav>
             <Records>
               <div>
-                <Accordion>
+                <Accordion className="acc">
                   <AccordionSummary
                     expandIcon={<i class="bx bxs-chevron-down"></i>}
                     aria-controls="panel1a-content"
@@ -79,7 +79,7 @@ function MenuModal({ open, setOpen }) {
                 <Link onClick={Close} to="doctors">{t("Header.4")}</Link>
               </p>
               <div>
-                <Accordion>
+                <Accordion className="acc">
                   <AccordionSummary
                     expandIcon={<i class="bx bxs-chevron-down"></i>}
                     aria-controls="panel1a-content"
@@ -96,7 +96,7 @@ function MenuModal({ open, setOpen }) {
                 {t("Header.6")}
               </p>
               <div>
-                <Accordion>
+                <Accordion className="acc">
                   <AccordionSummary
                     expandIcon={<i class="bx bxs-chevron-down"></i>}
                     aria-controls="panel1a-content"

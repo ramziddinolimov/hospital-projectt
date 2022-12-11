@@ -68,6 +68,34 @@ function Header() {
                 +998 (97) 277 0303
               </a>
             </li>
+            <li className="buttons">
+              {ValLang() === "uz" ? (
+                <>
+                  <button
+                    className="buttonRu"
+                    value="ru"
+                    onClick={HendelChange}
+                  >
+                    RU
+                  </button>
+                </>
+              ) : (
+                <button className="buttonUz" value="uz" onClick={HendelChange2}>
+                  UZ
+                </button>
+              )}
+              <button>togle</button>
+            </li>
+          </ul>
+        </Nav>
+        <Buttons />
+      </Infors>
+      <ModalMenu>
+        <Button onClick={() => setOpen(true)}>
+          <i class="bx bx-menu"></i>
+        </Button>
+        <Nav>
+          <ul>
             <li>
               {ValLang() === "uz" ? (
                 <>
@@ -87,23 +115,6 @@ function Header() {
             </li>
           </ul>
         </Nav>
-        <Buttons />
-      </Infors>
-      <ModalMenu>
-        <Button onClick={() => setOpen(true)}>
-          <i class="bx bx-menu"></i>
-        </Button>
-        {ValLang() === "uz" ? (
-          <>
-            <button className="buttonRu" value="ru" onClick={HendelChange}>
-              RU
-            </button>
-          </>
-        ) : (
-          <button className="buttonUz" value="uz" onClick={HendelChange2}>
-            UZ
-          </button>
-        )}
         <MenuModal open={open} setOpen={setOpen} />
       </ModalMenu>
     </Wrapper>

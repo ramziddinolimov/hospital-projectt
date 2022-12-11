@@ -30,6 +30,15 @@ export const Wrapper = styled.div`
         &:hover {
           color: #34e065;
         }
+        @media screen and (max-width: 1265px) {
+            font-size: 15px;
+        }
+        @media screen and (max-width: 1180px) {
+            font-size: 13px;
+        }
+        @media screen and (max-width: 1015px) {
+            font-size: 10px;
+        }
       }
     }
   }
