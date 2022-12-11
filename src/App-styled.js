@@ -5,7 +5,6 @@ export const WrapperContainer = styled.div`
   width: 1340px;
   margin: 0 auto;
   padding: 0 10px;
-  border: 1px solid black;
 `;
 
 export const GlobalStyle = createGlobalStyle`
@@ -13,6 +12,10 @@ body {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul , ol {
+list-style: none;
 }
 `;
-
