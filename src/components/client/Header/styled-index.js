@@ -8,12 +8,14 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 `;
 
 export const Infors = styled.div`
   width: 65%;
   margin: 0 !important;
+  @media screen and (max-width: 643px) {
+    display: none;
+  }
 `;
 
 export const Nav = styled.div`
@@ -66,7 +68,7 @@ export const Nav = styled.div`
     color: black;
     padding: 0;
     font-weight: 500;
-    
+
     p {
       width: 40px;
       height: 40px;
@@ -75,3 +77,13 @@ export const Nav = styled.div`
 `;
 
 export const Buttons = styled.div``;
+
+export const ModalMenu = styled.div`
+  display: none;
+  .bx {
+  font-size: 30px;
+  }
+  @media screen and (max-width: 643px) {
+    display: block;
+  }
+`;

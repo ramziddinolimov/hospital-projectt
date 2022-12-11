@@ -1,5 +1,5 @@
 import Logo from "../../../assets/client/hos.jpg";
-import { Wrapper, Infors, Nav } from "./styled-index";
+import { Wrapper, Infors, Nav, ModalMenu } from "./styled-index";
 import percentage from "../../../assets/client/percentage.json";
 import address from "../../../assets/client/address.json";
 import writing from "../../../assets/client/writing.json";
@@ -7,10 +7,14 @@ import call from "../../../assets/client/call.json";
 import Lottie from "lottie-react";
 import Buttons from "./buttons";
 import { useTranslation } from "react-i18next";
+import MenuModal from "./menu";
+import { useState } from "react";
+import { Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { t, i18n } = useTranslation();
-
+  const [open, setOpen] = useState(false);
   const HendelChange = (e) => {
     let LangVal = e.target.value;
     window.location.reload();
@@ -26,7 +30,9 @@ function Header() {
   };
   return (
     <Wrapper>
-      <img src={Logo} alt="logo" />
+      <Link to="/">
+        <img src={Logo} alt="logo" />
+      </Link>
       <Infors>
         <Nav>
           <ul>
@@ -83,6 +89,23 @@ function Header() {
         </Nav>
         <Buttons />
       </Infors>
+      <ModalMenu>
+        <Button onClick={() => setOpen(true)}>
+          <i class="bx bx-menu"></i>
+        </Button>
+        {ValLang() === "uz" ? (
+          <>
+            <button className="buttonRu" value="ru" onClick={HendelChange}>
+              RU
+            </button>
+          </>
+        ) : (
+          <button className="buttonUz" value="uz" onClick={HendelChange2}>
+            UZ
+          </button>
+        )}
+        <MenuModal open={open} setOpen={setOpen} />
+      </ModalMenu>
     </Wrapper>
   );
 }

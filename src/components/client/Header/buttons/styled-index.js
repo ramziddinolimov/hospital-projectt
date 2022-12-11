@@ -6,6 +6,17 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     padding: 0;
     margin: 10px 0;
+    @media screen and (max-width: 643px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 14%;
+      border-top: 1px solid black;
+      li {
+        margin-top: 10%;
+      }
+    }
     li {
       a {
         text-decoration: none;
@@ -17,7 +28,7 @@ export const Wrapper = styled.div`
         transition: 0.65s;
 
         &:hover {
-            color: #34e065;
+          color: #34e065;
         }
       }
     }

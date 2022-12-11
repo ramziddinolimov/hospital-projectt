@@ -3,6 +3,7 @@ import "./styles.css";
 import { motion } from "framer-motion";
 import { Wrapper } from "./styled-index";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Buttons() {
   const [isHover, toggleHover] = React.useState(false);
@@ -61,17 +62,13 @@ export default function Buttons() {
                 <div className="sub-menu-background" />
                 <div className="sub-menu-container">
                   <div className="sub-menu-item">Submenu Item 1</div>
-                  <div className="sub-menu-item">Submenu Item 2</div>
-                  <div className="sub-menu-item">Submenu Item 3</div>
-                  <div className="sub-menu-item">Submenu Item 4</div>
-                  <div className="sub-menu-item">Submenu Item 5</div>
                 </div>
               </motion.div>
             </motion.div>
           </div>
         </li>
         <li>
-          <a href="#">    {t("Header.4")} </a>
+          <a href="#"><Link to="doctors">{t("Header.4")}</Link></a>
         </li>
         <li>
           <div className="flex-item">
@@ -92,10 +89,6 @@ export default function Buttons() {
                 <div className="sub-menu-background" />
                 <div className="sub-menu-container">
                   <div className="sub-menu-item">Submenu Item 1</div>
-                  <div className="sub-menu-item">Submenu Item 2</div>
-                  <div className="sub-menu-item">Submenu Item 3</div>
-                  <div className="sub-menu-item">Submenu Item 4</div>
-                  <div className="sub-menu-item">Submenu Item 5</div>
                 </div>
               </motion.div>
             </motion.div>
@@ -123,17 +116,13 @@ export default function Buttons() {
                 <div className="sub-menu-background" />
                 <div className="sub-menu-container">
                   <div className="sub-menu-item">Submenu Item 1</div>
-                  <div className="sub-menu-item">Submenu Item 2</div>
-                  <div className="sub-menu-item">Submenu Item 3</div>
-                  <div className="sub-menu-item">Submenu Item 4</div>
-                  <div className="sub-menu-item">Submenu Item 5</div>
                 </div>
               </motion.div>
             </motion.div>
           </div>
         </li>
         <li>
-          <a href="#">    {t("Header.8")} </a>
+          <a href="#">{t("Header.8")} </a>
         </li>
       </ul>
     </Wrapper>

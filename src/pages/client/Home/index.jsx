@@ -1,10 +1,11 @@
+import Slder from "../../../components/client/Home/Slider";
+
 function Home() {
   return (
     <>
-      <h1>home</h1>
+      <Slder />
     </>
   );
 }
-
 
 export default Home;
